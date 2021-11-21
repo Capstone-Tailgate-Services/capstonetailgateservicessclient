@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="client/resources/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="nav-wrapper">
+            <!-- div allows me to properly manage content on the website & select -->
+            <div class="left-side">
+                <div class="nav-link-logo">
+                    <a href="index.html">CAPSTONE TAILGATE SERVICE</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="review.html">Reviews</a>
+                </div>
+
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="booking.html">Bookings</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="nav-link-wrapper">
+                    <a href="login.html">LOGIN</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contact-container">
+        <div style="text-align: center;">
+            <h2>Contact Us!</h2>
+            <p>Give us a call, or leave us a message:</p>
+            <p>Phone number: 334-411-1234</p>
+        </div>
+        <div class="row-contact-container">
+            <div class="column-contact-container">
+                <img src="client/resources/images/Capstone Tailgate Services-logo.png" class="img-center">
+            </div>
+            <div class="column-contact-container">
+                <form action="/action_page.php">
+                    <label for="fname">First Name</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <label for="lname">Last Name</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <label for="subject">Email</label>
+                    <input type="text" id="email" name="emailaddress" placeholder="Your email..">
+                    <label for="lname">Subject</label>
+                    <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
