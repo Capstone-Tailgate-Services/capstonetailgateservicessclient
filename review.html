@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Reviews</title>
+</head>
+<body onload="handleOnLoad()">
+    <div class="container">
+        <div class="nav-wrapper">
+            <!-- div allows me to properly manage content on the website & select -->
+            <div class="left-side">
+                <div class="nav-link-logo">
+                    <a href="index.html">CAPSTONE TAILGATE SERVICE</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="review.html">Reviews</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="booking.html">Bookings</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="nav-link-wrapper">
+                    <a href="login.html">LOGIN</a>
+                </div>
+            </div>
+        </div>
+        <div class="main-user-review">
+            <form onsubmit="return false;" method="post"> 
+                <label for="Reviewsrating">Rating:</label>
+                <input type="text" id="Reviewsrating" name="reviewsRating" readOnly><br><br>
+                <label for="Reviewstext">Review:</label>
+                <input type="text" id="Reviewstext" name="reviewsText" readOnly><br><br>
+                <label for="Reviewsauthor">Author:</label>
+                <input type="text" id="Reviewsauthor" name="reviewsAuthor" readOnly><br><br>
+                <label for="Reviewsdate">Timestamp:</label>
+                <input type="text" id="Reviewsdate" name="reviewsDate" readOnly><br><br>
+            </form>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
