@@ -6,7 +6,7 @@ function handleOnLoad() //calls the populateList method and populates the array
 function handleOnChange() //populates all the items in the list box to myBook
 {
     const selectedId = document.getElementById("selectListBox").value;
-    bookList.forEach((review)=>{
+    reviewList.forEach((review)=>{
         if(review.id == selectedId){
             myReview = review;
         }
