@@ -1,17 +1,17 @@
-const baseUrl = "https://pa6-backend.herokuapp.com/api/books/"; //url to pull from server
-var bookList = [];
-var myBook = {};
+const baseUrl = "https://capstonetailgateserviceapi.herokuapp.com/api/review"; //url to pull from server
+var reviewList = [];
+var myReview = {};
 
 function populateList(){ //populates book with all fields
 
-    const allBooksApiUrl = baseUrl;
-    fetch(allBooksApiUrl).then(function(response){
+    const allReviewApiUrl = baseUrl;
+    fetch(allReviewApiUrl).then(function(response){
         return response.json();
     }).then(function(json){
-        bookList = json;
+        reviewList = json;
         let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
-        json.forEach((book)=>{
-            html += "<option value = " + book.id  + ">" + book.title + "</option>";
+        json.forEach((review)=>{
+            html += "<option value = " + review.id  + ">" + review.Reviewstext + "</option>";
         })
         html += "</select>";
         document.getElementById("listBox").innerHTML = html;
@@ -20,62 +20,56 @@ function populateList(){ //populates book with all fields
     });
 }
 
-function putBook(id){ 
-    const putBookApiUrl = baseUrl + "/"+id;
-    const sendBook = {
+function putReview(id){ 
+    const putReviewApiUrl = baseUrl + "/"+id;
+    const sendReview = {
         id: id,
-        title: document.getElementById("bookTitle").value,
-        author: document.getElementById("bookAuthor").value,
-        genre: document.getElementById("bookGenre").value,
-        numAvlb: parseInt(document.getElementById("bookAvlb").value),
-        isbn: document.getElementById("bookIsbn").value,
-        length: parseInt(document.getElementById("bookLength").value),
-        cover: document.getElementById("bookCover").value
+        reviewRating: document.getElementById("Reviewsrating").value,
+        reviewText: document.getElementById("Reviewstext").value,
+        reviewAuthor: document.getElementById("Reviewsauthor").value,
+        reviewDate: document.getElementById("Reviewsdate").value
     }
-    fetch(putBookApiUrl, {
+    fetch(putReviewApiUrl, {
         method: "PUT",
         headers: {
             "Accept": 'application/json',
             "Content-Type": 'application/json',
         },
-        body: JSON.stringify(sendBook)
+        body: JSON.stringify(sendReview)
     })
     .then((response)=>{
-        myBook = sendBook;
+        myReview = sendReview;
         populateList();
         populateForm();
     });
 }
 
-function postBook(){
-    const postBookApiUrl = baseUrl;
-    const sendBook = {
-        title: document.getElementById("bookTitle").value,
-        author: document.getElementById("bookAuthor").value,
-        genre: document.getElementById("bookGenre").value,
-        numAvlb: parseInt(document.getElementById("bookAvlb").value),
-        isbn: document.getElementById("bookIsbn").value,
-        length: parseInt(document.getElementById("bookLength").value),
-        cover: document.getElementById("bookCover").value
+function postReview(){
+    const postReviewApiUrl = baseUrl;
+    const sendReview = {
+        reviewRating: document.getElementById("Reviewsrating").value,
+        reviewText: document.getElementById("Reviewstext").value,
+        reviewAuthor: document.getElementById("Reviewsauthor").value,
+        reviewDate: document.getElementById("Reviewsdate").value
     }
-    fetch(postBookApiUrl, {
+    fetch(postReviewApiUrl, {
         method: "POST",
         headers: {
             "Accept": 'application/json',
             "Content-Type": 'application/json',
         },
-        body: JSON.stringify(sendBook)
+        body: JSON.stringify(sendReview)
     })
     .then((response)=>{
-        myBook = sendBook;
+        myReview = sendReview;
         populateList();
         blankFields();
     });
 }
 
-function deleteBook(){
-    const deleteBookApiUrl = baseUrl + "/" + myBook.id;
-    fetch(deleteBookApiUrl, {
+function deleteReview(){
+    const deleteReviewApiUrl = baseUrl + "/" + myReview.id;
+    fetch(deleteReviewApiUrl, {
         method: "DELETE",
         headers: {
             "Accept": 'application/json',
