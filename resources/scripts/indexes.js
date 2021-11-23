@@ -20,7 +20,7 @@ function populateForm() //populates the form with all the important values
     document.getElementById("reviewsrating").value = myReview.reviewsrating;
     document.getElementById("reviewstext").value = myReview.reviewstext;
     document.getElementById("reviewsauthor").value = myReview.reviewsauthor;
-    document.getElementById("reviewstime").value = myReview.reviewstime;
+    // document.getElementById("reviewstime").value = myReview.reviewstime;
 }
 
 function blankFields() //stores the value of the empty text box
@@ -28,7 +28,7 @@ function blankFields() //stores the value of the empty text box
     document.getElementById("reviewsrating").value="";
     document.getElementById("reviewstext").value="";
     document.getElementById("reviewsauthor").value="";
-    document.getElementById("reviewstime").value="";
+    // document.getElementById("reviewstime").value="";
 }
 
 
@@ -37,5 +37,5 @@ function makeReadOnly() //makes it so user can only edit when he clicks edit
     document.getElementById("reviewsrating").readOnly=true;
     document.getElementById("reviewstext").readOnly=true;
     document.getElementById("reviewsauthor").readOnly=true;
-    document.getElementById("reviewstime").readOnly=true;
+    // document.getElementById("reviewstime").readOnly=true;
 }
