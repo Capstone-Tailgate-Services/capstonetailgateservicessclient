@@ -17,25 +17,25 @@ function handleOnChange() //populates all the items in the list box to myBook
 
 function populateForm() //populates the form with all the important values
 {
-    document.getElementById("Reviewsrating").value = myReview.reviewRating;
-    document.getElementById("Reviewstext").value = myReview.reviewText;
-    document.getElementById("Reviewsauthor").value = myReview.reviewAuthor;
-    document.getElementById("Reviewsdate").value = myReview.reviewDate;
+    document.getElementById("reviewsrating").value = myReview.reviewsrating;
+    document.getElementById("reviewstext").value = myReview.reviewstext;
+    document.getElementById("reviewsauthor").value = myReview.reviewsauthor;
+    document.getElementById("reviewstime").value = myReview.reviewstime;
 }
 
 function blankFields() //stores the value of the empty text box
 {
-    document.getElementById("Reviewsrating").value="";
-    document.getElementById("Reviewstext").value="";
-    document.getElementById("Reviewsauthor").value="";
-    document.getElementById("Reviewsdate").value="";
+    document.getElementById("reviewsrating").value="";
+    document.getElementById("reviewstext").value="";
+    document.getElementById("reviewsauthor").value="";
+    document.getElementById("reviewstime").value="";
 }
 
 
 function makeReadOnly() //makes it so user can only edit when he clicks edit
 {
-    document.getElementById("Reviewsrating").readOnly=true;
-    document.getElementById("Reviewstext").readOnly=true;
-    document.getElementById("Reviewsauthor").readOnly=true;
-    document.getElementById("Reviewsdate").readOnly=true;
+    document.getElementById("reviewsrating").readOnly=true;
+    document.getElementById("reviewstext").readOnly=true;
+    document.getElementById("reviewsauthor").readOnly=true;
+    document.getElementById("reviewstime").readOnly=true;
 }

@@ -11,7 +11,7 @@ function populateList(){ //populates book with all fields
         reviewList = json;
         let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
         json.forEach((review)=>{
-            html += "<option value = " + review.id  + ">" + review.Reviewstext + "</option>";
+            html += "<option value = " + review.id  + ">" + review.reviewstext + "</option>";
         })
         html += "</select>";
         document.getElementById("listBox").innerHTML = html;
@@ -24,10 +24,10 @@ function putReview(id){
     const putReviewApiUrl = baseUrl + "/"+id;
     const sendReview = {
         id: id,
-        reviewRating: document.getElementById("Reviewsrating").value,
-        reviewText: document.getElementById("Reviewstext").value,
-        reviewAuthor: document.getElementById("Reviewsauthor").value,
-        reviewDate: document.getElementById("Reviewsdate").value
+        reviewsRating: document.getElementById("reviewsrating").value,
+        reviewsText: document.getElementById("reviewstext").value,
+        reviewsAuthor: document.getElementById("reviewsauthor").value,
+        reviewTime: document.getElementById("reviewstime").value
     }
     fetch(putReviewApiUrl, {
         method: "PUT",
@@ -47,10 +47,10 @@ function putReview(id){
 function postReview(){
     const postReviewApiUrl = baseUrl;
     const sendReview = {
-        reviewRating: document.getElementById("Reviewsrating").value,
-        reviewText: document.getElementById("Reviewstext").value,
-        reviewAuthor: document.getElementById("Reviewsauthor").value,
-        reviewDate: document.getElementById("Reviewsdate").value
+        reviewsRating: document.getElementById("reviewsrating").value,
+        reviewsText: document.getElementById("reviewstext").value,
+        reviewsAuthor: document.getElementById("reviewsauthor").value,
+        reviewTime: document.getElementById("reviewstime").value
     }
     fetch(postReviewApiUrl, {
         method: "POST",
