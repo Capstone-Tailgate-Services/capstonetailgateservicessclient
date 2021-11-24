@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="resources/css/josh-styles.css">
+    <link rel="stylesheet" href="resources/css/signup.css">
     
 
 </head>
@@ -18,27 +18,23 @@
    
     
     <body>
-    
-        <!--Step 1 : Adding HTML-->
         <form action="/action_page.php">
             <div class="imgcontainer">
                 <img src="resources/images/Capstone Tailgate Services-logo.png" alt="Avatar" class="avatar">
             </div>
     
             <div class="container">
-                <label><b>Username</b></label>
-                <input type="text" placeholder="Enter email address" name="uname" required>
-    
-                <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-    
-                <button type="submit">Login</button>
-            </div>
-    
-            <div class="container" style="background-color: white">
-                <div class="nav-link-wrapper">
-                    <a href="signup.html">Don't have an account? Click here to sign up!</a>
-                </div>
+                <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" required>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" required>
+  
+      <label for="psw-repeat"><b>Repeat Password</b></label>
+      <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+  
+      <div class="clearfix">
+        <button type="submit" class="signupbtn">Sign Up</button>
             </div>
         </form>
     

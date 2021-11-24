@@ -37,16 +37,6 @@ button {
 button:hover {
     opacity: 0.8;
 }
-/*set extra style for the cancel button*/
-
-.cancelbtn {
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    background-color: #f44336;
-}
 /*centre the display image inside the container*/
 
 .imgcontainer {
@@ -74,8 +64,8 @@ span.psw {
 body {
     margin: 0;
     width: 0;
-    background-image: url('../images/BDS.png');
     background-size: cover;
+    background-image: url('../images/bdsnight.jpg');
     background-position: center;
     display: flex;
     justify-content: center;

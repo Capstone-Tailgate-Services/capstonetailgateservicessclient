@@ -27,7 +27,7 @@ function putReview(id){
         reviewsRating: document.getElementById("reviewsrating").value,
         reviewsText: document.getElementById("reviewstext").value,
         reviewsAuthor: document.getElementById("reviewsauthor").value,
-        reviewTime: document.getElementById("reviewstime").value
+        date: document.getElementById("date").value
     }
     fetch(putReviewApiUrl, {
         method: "PUT",
@@ -50,7 +50,7 @@ function postReview(){
         reviewsRating: document.getElementById("reviewsrating").value,
         reviewsText: document.getElementById("reviewstext").value,
         reviewsAuthor: document.getElementById("reviewsauthor").value,
-        reviewTime: document.getElementById("reviewstime").value
+        date: document.getElementById("date").value
     }
     fetch(postReviewApiUrl, {
         method: "POST",
