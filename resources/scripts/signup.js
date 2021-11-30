@@ -59,5 +59,6 @@ function postUser(){
         myUser = sendUser;
         getUsers();
         blankFields();
+        alert("User account successfully created. Please navigate back to the login page."); 
     });
 }
