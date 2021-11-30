@@ -19,7 +19,7 @@ function getUsers(){
     });
 }
 //method that creates an object from the user data and calls the back end and sends the object across to save the user
-function putUser(id){
+/*function putUser(id){
     const putUserApiUrl = baseUrl + "/"+id;
     const sendUser = {
         id: id,
@@ -39,7 +39,7 @@ function putUser(id){
         getUsers();
         populateForm();
     });
-}
+}*/
 //method that allows you to save a new user that didn't exist before
 function postUser(){
     const postUserApiUrl = baseUrl;
@@ -59,6 +59,6 @@ function postUser(){
         myUser = sendUser;
         getUsers();
         blankFields();
-        alert("User account successfully created. Please navigate back to the login page."); 
+        alert("User account successfully created. To log in please navigate back to the login page."); 
     });
 }

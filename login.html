@@ -17,10 +17,11 @@
     <html>
    
     
-    <body>
-    
+    <body onload = "handleOnLoad()">
+        <script src="./resources/scripts/login.js"></script>
+        <script src="./resources/scripts/loginindex.js"></script>
         <!--Step 1 : Adding HTML-->
-        <form action="file:///C:/JoshuaWigginsMIS321/repos2/CTSclient2/capstonetailgateservicessclient/review.html" method="post">
+        <form action="file:///C:/JoshuaWigginsMIS321/repos2/CTSclient2/capstonetailgateservicessclient/review.html" method="put">
             <div class="imgcontainer">
                 <img src="resources/images/Capstone Tailgate Services-logo.png" alt="Avatar" class="avatar">
             </div>
@@ -32,7 +33,7 @@
                 <label><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" id="userpassword" name = "userpassword" required>
                 
-                <button type="submit" onclick="logInUser()">Login</button>
+                <button type="submit" class="btn btn-primary" onclick="logInUser()">Login</button>
                 
             </div>
         
