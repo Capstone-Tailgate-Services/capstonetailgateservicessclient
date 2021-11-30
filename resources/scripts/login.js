@@ -27,7 +27,7 @@ function logInUser(id){
         userPassword: document.getElementById("userpassword").value
     }
     fetch(putUserApiUrl, {
-        method: "PUT",
+        method: "GET",
         headers: {
             "Accept": 'application/json',
             "Content-Type": 'application/json',
