@@ -20,8 +20,15 @@
     <body onload = "handleOnLoad()">
         <script src="./resources/scripts/login.js"></script>
         <script src="./resources/scripts/loginindex.js"></script>
+        
         <!--Step 1 : Adding HTML-->
-        <form action="https://capstonetailgateserviceclient.herokuapp.com/review.html" method="put">
+        <form onsubmit="return false;" method="post">
+            <div class ="container">
+                <div class= "row">
+                  <div class= "col-md-3">
+                    <h3>Available Books</h3>
+                    <div id="listBox"></div>
+                  </div>
             <div class="imgcontainer">
                 <img src="resources/images/Capstone Tailgate Services-logo.png" alt="Avatar" class="avatar">
             </div>
@@ -32,7 +39,8 @@
         
                 <label><b>Password</b></label>
                 <input type="password" placeholder="Enter Password" id="userpassword" name = "userpassword" required>
-                
+                <p hidden><input type="admin" placeholder="Admin" id ="admin" name="admin" required pattern = 2></p>
+
                 <button type="submit" class="btn btn-primary" onclick="logInUser()">Login</button>
                 
             </div>
