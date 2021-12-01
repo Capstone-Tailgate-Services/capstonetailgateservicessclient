@@ -21,36 +21,34 @@ function getUsers(){
 
 //method that creates an object from the user data and calls the back end and sends the object across to save the user
 function logInUser(){
-    const useremail = document.getElementById("useremail").value;
-    const userpassword = document.getElementById("userpassword").value;
-
-    console.log(useremail, userpassword);
-
-    const url = baseUrl;
-
-    fetch(url, {
-        method: 'POST',
+    const postUserApiUrl = baseUrl;
+    const sendUser = {
+        userEmail: document.getElementById("useremail").value,
+        userPassword: document.getElementById("userpassword").value,
+        /*admin: document.getElementById("admin").value,*/
+    }
+    fetch(postUserApiUrl, {
+        method: "POST",
         headers: {
-            "Accept": "application/json",
-            "Content-type": "application/json"
+            "Accept": 'application/json',
+            "Content-Type": 'application/json',
         },
-        body: JSON.stringify({
-            //get these from the dom at some point; these are hardcoded for now
-            userEmail: useremail,
-            userPassword: userpassword
-        })
-    }).then(response => response.json()).then(useremail => {
-        if (useremail = "nicksaban@aol.com") {
-            alert("SUCCESS: You are now logged in");
-            window.location.href="https://www.thebeatles.com/";
-        } 
-        else{
-            alert("You are not logged in");
-            window.location.href="file:///C:/JoshuaWigginsMIS321/repos2/CTSclient2/capstonetailgateservicessclient/login.html"
-        }
+        body: JSON.stringify(sendUser)
     })
-    .catch(error => console.log(error));
-
+    .then((response)=>{
+        myUser = sendUser;
+        getUsers();
+        blankFields();
+        /*alert("User account successfully created. To log in please navigate back to the login page.");*/ 
+    });
+    if (admin = 0) {
+        alert("SUCCESS: You are now logged in");
+        window.location.href="https://www.thebeatles.com/";
+    } 
+    else{
+        alert("You are not logged in");
+        window.location.href="file:///C:/JoshuaWigginsMIS321/repos2/CTSclient2/capstonetailgateservicessclient/login.html"
+    }
 }
 /*function logInUser()
 {
