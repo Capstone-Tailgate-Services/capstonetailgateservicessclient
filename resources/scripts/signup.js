@@ -10,7 +10,7 @@ function getUsers(){
         userList = json;
         let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
         json.forEach((user)=>{
-            html += "<option value = " + user.id  + ">" + user.useremail + ">"+ ">" + user.userpassword + ">" + "</option>";
+            html += "<option value = " + user.id  + ">" + user.useremail + ">"+ ">" + user.userpassword + ">" + ">" + user.admin + ">" + "</option>";
         })
         html += "</select>";
         document.getElementById("listBox").innerHTML = html;
