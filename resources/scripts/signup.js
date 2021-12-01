@@ -47,7 +47,7 @@ function postUser(){
     const sendUser = {
         userEmail: document.getElementById("useremail").value,
         userPassword: document.getElementById("userpassword").value,
-        admin: document.getElementById("admin").value,
+        /*admin: document.getElementById("admin").value,*/
     }
     fetch(postUserApiUrl, {
         method: "POST",
