@@ -21,14 +21,36 @@ function getUsers(){
 
 //method that creates an object from the user data and calls the back end and sends the object across to save the user
 function logInUser(){
-    if (admin = 0) {
-        alert("SUCCESS: You are now logged in");
-        window.location.href="https://www.thebeatles.com/";
-    } 
-    else{
-        alert("You are not logged in");
-        window.location.href="file:///C:/JoshuaWigginsMIS321/repos2/CTSclient2/capstonetailgateservicessclient/login.html"
-    }
+    const useremail = document.getElementById("useremail").value;
+    const userpassword = document.getElementById("userpassword").value;
+
+    console.log(useremail, userpassword);
+
+    const url = baseUrl;
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            "Accept": "application/json",
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            //get these from the dom at some point; these are hardcoded for now
+            userEmail: useremail,
+            userPassword: userpassword
+        })
+    }).then(response => response.json()).then(useremail => {
+        if (useremail = "nicksaban@aol.com") {
+            alert("SUCCESS: You are now logged in");
+            window.location.href="https://www.thebeatles.com/";
+        } 
+        else{
+            alert("You are not logged in");
+            window.location.href="file:///C:/JoshuaWigginsMIS321/repos2/CTSclient2/capstonetailgateservicessclient/login.html"
+        }
+    })
+    .catch(error => console.log(error));
+
 }
 /*function logInUser()
 {
