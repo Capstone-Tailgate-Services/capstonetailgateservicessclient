@@ -11,7 +11,7 @@ function populateList(){ //populates book with all fields
         reviewList = json;
         let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
         json.forEach((review)=>{
-            html += "<option value = " + review.id  + ">" + review.reviewstext + "</option>";
+            html += "<option value = " + review.id  + ">" + review.reviewstext  +  "</option>";
         })
         html += "</select>";
         document.getElementById("listBox").innerHTML = html;
@@ -81,3 +81,5 @@ function deleteReview(){
         populateList();
     });
 }
+
+
