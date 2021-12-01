@@ -17,30 +17,33 @@
     <html>
    
     
-    <body>
-    
+    <body onload = "handleOnLoad()">
+        <script src="./resources/scripts/login.js"></script>
+        <script src="./resources/scripts/loginindex.js"></script>
         <!--Step 1 : Adding HTML-->
-        <form action="/action_page.php">
+        <form action="file:///C:/JoshuaWigginsMIS321/repos2/CTSclient2/capstonetailgateservicessclient/review.html" method="put">
             <div class="imgcontainer">
                 <img src="resources/images/Capstone Tailgate Services-logo.png" alt="Avatar" class="avatar">
             </div>
-    
+        
             <div class="container">
-                <label><b>Username</b></label>
-                <input type="text" placeholder="Enter email address" name="uname" required>
-    
+               <label><b>Username</b></label>
+                <input type="text" placeholder="Enter email address" id="useremail" name = "useremail" required>
+        
                 <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="psw" required>
-    
-                <button type="submit">Login</button>
+                <input type="password" placeholder="Enter Password" id="userpassword" name = "userpassword" required>
+                
+                <button type="submit" class="btn btn-primary" onclick="logInUser()">Login</button>
+                
             </div>
-    
+        
             <div class="container" style="background-color: white">
                 <div class="nav-link-wrapper">
                     <a href="signup.html">Don't have an account? Click here to sign up!</a>
                 </div>
             </div>
         </form>
+        
     
     </body>
     
