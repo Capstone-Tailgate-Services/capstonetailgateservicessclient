@@ -1,7 +1,7 @@
 const baseUrl = `https://capstonetailgateserviceapi.herokuapp.com/api/user`;
 var userList = [];
 var myUser = {};
-function getUsers(){
+/*function getUsers(){
 
     const allUsersApiUrl = baseUrl;
     fetch(allUsersApiUrl).then(function(response){
@@ -17,7 +17,7 @@ function getUsers(){
     }).catch(function(error){
         console.log(error);
     });
-}
+}*/
 
 //method that creates an object from the user data and calls the back end and sends the object across to save the user
 function logInUser(){
