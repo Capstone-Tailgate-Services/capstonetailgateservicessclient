@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Reviews</title>
+</head>
+<body onload="handleOnLoad()">
+    <script src="./resources/scripts/adminrev.js"></script>
+    <script src="./resources/scripts/adminindex.js"></script>
+    <div class="container">
+        <div class="nav-wrapper">
+            <!-- div allows me to properly manage content on the website & select -->
+            
+            <div class="left-side">
+                <div class="nav-link-logo">
+                    <a href="index.html">CAPSTONE TAILGATE SERVICE</a>
+                </div>
+
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="home.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="about.html">About</a>
+                </div>
+
+                <div class="nav-link-wrapper active-nav-link">
+                    <a href="review.html">Reviews</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="booking.html">Bookings</a>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <div class="nav-link-wrapper">
+                    <a href="admin.html">Admin Login</a>
+                </div>
+
+                <div class="nav-link-wrapper">
+                    <a href="login.html">Login</a>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="main-user-review">
+            <div class="aval-reviews">Avaliable Reviews</div>
+            <div id = "listBox"></div>
+            <form onsubmit="return false;" method="post"> 
+                <label for="reviewsrating">Rating:</label>
+                <input type="text" id="reviewsrating" name="reviewsrating" readOnly><br><br>
+                <label for="reviewstext">Review:</label>
+                <input type="text" id="reviewstext" name="reviewstext" readOnly><br><br>
+                <label for="reviewsauthor">Author:</label>
+                <input type="text" id="reviewsauthor" name="reviewsauthor" readOnly><br><br>
+                <label for="reviewstime">Timestamp:</label>
+                <input type="text" id="date" name="date" readOnly><br><br>
+            </form>
+            <div class="btnRow">
+                <button id="newButton" class="btn btn-primary" onclick = "handleNewClick()">New</button>
+                <button id="editButton" class="btn btn-primary" onclick = "handleEditClick()">Edit</button>
+                <button id="deleteButton" class="btn btn-primary" onclick = "handleDeleteClick()">Delete</button>
+                <br>
+                <span id="saveButton"></span>
+              </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+</html>
