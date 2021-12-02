@@ -64,6 +64,23 @@ function populateForm() //populates the form with all the important values
     document.getElementById("reviewsauthor").value = myReview.reviewsauthor;
     document.getElementById("date").value = myReview.date;
 }
+//method that hides the buttons by setting the display for each button to none
+function hideButtons(){
+    document.getElementById("newButton").style.display = "none";
+    document.getElementById("editButton").style.display = "none";
+    document.getElementById("deleteButton").style.display = "none";
+}
+//method that displays the buttons
+function showButtons(){
+    document.getElementById("newButton").style.display = "inline-block";
+    document.getElementById("editButton").style.display = "inline-block";
+    document.getElementById("deleteButton").style.display = "inline-block";
+    document.getElementById("saveButton").style.display = "none";
+}
+// method that makes the fields editable by setting the readOnly property to false
+function makeEditable(){
+    postText = document.getElementById("posttext").readOnly=false;
+}
 
 function blankFields() //stores the value of the empty text box
 {
