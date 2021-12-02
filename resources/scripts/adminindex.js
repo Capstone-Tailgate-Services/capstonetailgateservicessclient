@@ -35,7 +35,7 @@ function handleNewClick(){
 }
 //method that activates the delete button and allows the user to delete a review by calling the deleteTweet() method
 function handleDeleteClick(){
-    deleteTweet();
+    deleteReview();
 }
 //method that cancels the save by putting the data back on the form, making the data read-only, and showing the new, edit, and delete buttons
 function handleCancelSave(){
@@ -79,7 +79,10 @@ function showButtons(){
 }
 // method that makes the fields editable by setting the readOnly property to false
 function makeEditable(){
-    postText = document.getElementById("posttext").readOnly=false;
+    reviewsRating = document.getElementById("reviewsrating").readOnly = false;
+    reviewsText = document.getElementById("reviewstext").readOnly = false;
+    reviewsAuthor = document.getElementById("reviewsauthor").readOnly = false;
+    date = document.getElementById("date").readOnly = false;
 }
 
 function blankFields() //stores the value of the empty text box
@@ -93,8 +96,8 @@ function blankFields() //stores the value of the empty text box
 
 function makeReadOnly() //makes it so user can only edit when he clicks edit
 {
-    document.getElementById("reviewsrating").readOnly=true;
-    document.getElementById("reviewstext").readOnly=true;
-    document.getElementById("reviewsauthor").readOnly=true;
-    document.getElementById("date").readOnly=true;
+    reviewsRating = document.getElementById("reviewsrating").readOnly = true;
+    reviewsText = document.getElementById("reviewstext").readOnly = true;
+    reviewsAuthor = document.getElementById("reviewsauthor").readOnly = true;
+    date = document.getElementById("date").readOnly = true;
 }
