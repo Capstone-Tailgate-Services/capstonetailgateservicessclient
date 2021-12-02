@@ -22,15 +22,24 @@ var myUser = {};
 //method that creates an object from the user data and calls the back end and sends the object across to save the user
 function logInUser(){
     const allUsersApiUrl = baseUrl;
-    fetch(allUsersApiUrl).then(function(response){
-        return response.json();
-    }).then(function(json){
-        userList = json;
-        let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
-        json.forEach((user)=>{
-            html += "<option value = " + user.id  + ">" + user.useremail + ">"+ ">" + user.userpassword + ">" + ">" + user.admin + ">" +"</option>";
+    const useremail = document.getElementById("useremail").value;
+    const userpassword = document.getElementById("userpassword").value;
+
+    console.log(useremail, userpassword);
+
+    fetch(baseUrl, {
+        method: 'PUT',
+        headers: {
+            "Accept": "application/json",
+            "Content-type": "application/json"
+        },
+        body: JSON.stringify({
+            userEmail: useremail,
+            userPassword: userpassword
         })
-        html += "</select>";
+
+    }).then(function(json){
+
         if (user.admin = 0) {
             alert("SUCCESS: You are now logged in");
             window.location.href="https://www.thebeatles.com/";        
