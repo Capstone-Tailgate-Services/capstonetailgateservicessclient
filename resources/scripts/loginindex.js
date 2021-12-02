@@ -1,6 +1,7 @@
 function handleOnLoad() //calls the getUsers method and populates the array
 {
-    getUsers();
+    /*getUsers();*/
+    logInUser();
 }
 
 function handleOnChange() //populates all the items in the list box to myUser
