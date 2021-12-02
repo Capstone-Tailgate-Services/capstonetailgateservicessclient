@@ -31,7 +31,6 @@ function logInUser(){
             html += "<option value = " + user.id  + ">" + user.useremail + ">"+ ">" + user.userpassword + ">" + ">" + user.admin + ">" +"</option>";
         })
         html += "</select>";
-        document.getElementById("listBox").innerHTML = html;
         if (user.admin = 0) {
             alert("SUCCESS: You are now logged in");
             window.location.href="https://www.thebeatles.com/";        
