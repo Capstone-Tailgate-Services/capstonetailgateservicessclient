@@ -1,7 +1,7 @@
 const baseUrl = `https://capstonetailgateserviceapi.herokuapp.com/api/user`;
 var userList = [];
 var myUser = {};
-/*function getUsers(){
+function getUsers(){
 
     const allUsersApiUrl = baseUrl;
     fetch(allUsersApiUrl).then(function(response){
@@ -17,7 +17,7 @@ var myUser = {};
     }).catch(function(error){
         console.log(error);
     });
-}*/
+}
 
 //method that creates an object from the user data and calls the back end and sends the object across to save the user
 function logInUser(){
@@ -42,7 +42,7 @@ function logInUser(){
 
         if (user.admin = 0) {
             alert("SUCCESS: You are now logged in");
-            window.location.href="https://www.thebeatles.com/";        
+            window.location.href="https://capstonetailgateserviceclient.herokuapp.com/review.html";        
         } 
         else if (user.admin !=0){
             alert("You are not logged in");
