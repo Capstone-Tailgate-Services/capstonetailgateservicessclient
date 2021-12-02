@@ -32,18 +32,17 @@ function logInUser(){
         })
         html += "</select>";
         document.getElementById("listBox").innerHTML = html;
+        if (user.admin = 0) {
+            alert("SUCCESS: You are now logged in");
+            window.location.href="https://www.thebeatles.com/";        
+        } 
+        else if (user.admin !=0){
+            alert("You are not logged in");
+            window.location.href="https://capstonetailgateserviceclient.herokuapp.com/login.html"   
+        }
     }).catch(function(error){
         console.log(error);
     });
-    
-    if (user.admin = 0) {
-        alert("SUCCESS: You are now logged in");
-        window.location.href="https://www.thebeatles.com/";        
-    } 
-    else if (user.admin !=0){
-        alert("You are not logged in");
-        window.location.href="https://capstonetailgateserviceclient.herokuapp.com/login.html"   
-    }
 }
 /*function logInUser()
 {
