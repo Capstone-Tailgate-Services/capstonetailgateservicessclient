@@ -17,7 +17,7 @@
     <html>
    
     
-    <body onload = "handleOnLoad()">
+    <body>
         <script src="./resources/scripts/login.js"></script>
         <script src="./resources/scripts/loginindex.js"></script>
         
@@ -29,10 +29,10 @@
         
             <div class="container">
                <label><b>Username</b></label>
-                <input type="text" placeholder="Enter email address" id="useremail" name = "useremail" required pattern="nateoats@gmail.com|nicksaban@aol.com">
+                <input type="text" placeholder="Enter email address" id="useremail" name = "useremail" required>
         
                 <label><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" id="userpassword" name = "userpassword" required pattern= "bluecollar|bama">
+                <input type="password" placeholder="Enter Password" id="userpassword" name = "userpassword" required>
                 
 
                 <button type="submit" class="btn btn-primary" onclick="logInUser()">Login</button>

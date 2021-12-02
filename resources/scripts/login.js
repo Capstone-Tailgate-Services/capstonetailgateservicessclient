@@ -1,5 +1,5 @@
 const baseUrl = `https://capstonetailgateserviceapi.herokuapp.com/api/user`;
-var userList = [];
+/*var userList = [];
 var myUser = {};
 function getUsers(){
 
@@ -17,39 +17,28 @@ function getUsers(){
     }).catch(function(error){
         console.log(error);
     });
-}
+}*/
 
 //method that creates an object from the user data and calls the back end and sends the object across to save the user
 function logInUser(){
-    const allUsersApiUrl = baseUrl;
-    const useremail = document.getElementById("useremail").value;
-    const userpassword = document.getElementById("userpassword").value;
-
-    console.log(useremail, userpassword);
-
-    fetch(baseUrl, {
-        method: 'PUT',
+    const putUserApiUrl = baseUrl + "/"+id;
+    const sendUser = {
+        id: id,
+        userEmail: document.getElementById("useremail").value,
+        userPassword: document.getElementById("userpassword").value
+    }
+    fetch(putUserApiUrl, {
+        method: "PUT",
         headers: {
-            "Accept": "application/json",
-            "Content-type": "application/json"
+            "Accept": 'application/json',
+            "Content-Type": 'application/json',
         },
-        body: JSON.stringify({
-            userEmail: useremail,
-            userPassword: userpassword
-        })
-
-    }).then(function(json){
-
-        if (user.admin = 0) {
-            alert("SUCCESS: You are now logged in");
-            window.location.href="https://capstonetailgateserviceclient.herokuapp.com/review.html";        
-        } 
-        else if (user.admin !=0){
-            alert("You are not logged in");
-            window.location.href="https://capstonetailgateserviceclient.herokuapp.com/login.html"   
-        }
-    }).catch(function(error){
-        console.log(error);
+        body: JSON.stringify(sendUser)
+    })
+    .then((response)=>{
+        myUser = sendUser;
+        getUsers();
+        populateForm();
     });
 }
 /*function logInUser()
