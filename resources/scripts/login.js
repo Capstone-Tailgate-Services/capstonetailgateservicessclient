@@ -21,33 +21,28 @@ function getUsers(){
 
 //method that creates an object from the user data and calls the back end and sends the object across to save the user
 function logInUser(){
-    const postUserApiUrl = baseUrl;
-    const sendUser = {
-        userEmail: document.getElementById("useremail").value,
-        userPassword: document.getElementById("userpassword").value,
-        /*admin: document.getElementById("admin").value,*/
-    }
-    fetch(postUserApiUrl, {
-        method: "POST",
-        headers: {
-            "Accept": 'application/json',
-            "Content-Type": 'application/json',
-        },
-        body: JSON.stringify(sendUser)
-    })
-    .then((response)=>{
-        myUser = sendUser;
-        getUsers();
-        blankFields();
-        /*alert("User account successfully created. To log in please navigate back to the login page.");*/ 
+    const allUsersApiUrl = baseUrl;
+    fetch(allUsersApiUrl).then(function(response){
+        return response.json();
+    }).then(function(json){
+        userList = json;
+        let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
+        json.forEach((user)=>{
+            html += "<option value = " + user.id  + ">" + user.useremail + ">"+ ">" + user.userpassword + ">" + ">" + user.admin + ">" +"</option>";
+        })
+        html += "</select>";
+        document.getElementById("listBox").innerHTML = html;
+    }).catch(function(error){
+        console.log(error);
     });
-    if (admin = 0) {
+    
+    if (user.admin = 0) {
         alert("SUCCESS: You are now logged in");
-        window.location.href="https://www.thebeatles.com/";
+        window.location.href="https://www.thebeatles.com/";        
     } 
-    else{
+    else if (user.admin !=0){
         alert("You are not logged in");
-        window.location.href="file:///C:/JoshuaWigginsMIS321/repos2/CTSclient2/capstonetailgateservicessclient/login.html"
+        window.location.href="https://capstonetailgateserviceclient.herokuapp.com/login.html"   
     }
 }
 /*function logInUser()
@@ -59,7 +54,7 @@ function logInUser(){
         admin: document.getElementById("admin").value,
     }
     fetch(postUserApiUrl, {
-        method: "GET",
+        method: "POST",
         headers: {
             "Accept": 'application/json',
             "Content-Type": 'application/json',

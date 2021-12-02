@@ -16,7 +16,6 @@ function getUsers(){
         document.getElementById("listBox").innerHTML = html;
     }).catch(function(error){
         console.log(error);
-        
     });
 }
 //method that creates an object from the user data and calls the back end and sends the object across to save the user
@@ -47,7 +46,6 @@ function postUser(){
     const sendUser = {
         userEmail: document.getElementById("useremail").value,
         userPassword: document.getElementById("userpassword").value,
-        /*admin: document.getElementById("admin").value,*/
     }
     fetch(postUserApiUrl, {
         method: "POST",
@@ -61,6 +59,6 @@ function postUser(){
         myUser = sendUser;
         getUsers();
         blankFields();
-        /*alert("User account successfully created. To log in please navigate back to the login page.");*/ 
+        alert("User account successfully created. To log in please navigate back to the login page."); 
     });
 }
