@@ -53,19 +53,25 @@
         
 
         <div class="main-user-review">
-            <div class="aval-reviews">Avaliable Reviews
-                 <div id = "listBox"></div>
+            <div class="card">
+                <div class="card-container">
+                    <div class="aval-reviews">Avaliable Reviews
+                        <div id = "listBox"></div>
+                    </div>
+                </div>
             </div>
-            <div class="flip-card-back">
+            <div class="card">
                 <form onsubmit="return false;" method="post"> 
-                    <label for="reviewsauthor">Author:</label>
-                    <input type="text" id="reviewsauthor" name="reviewsauthor" readOnly><br><br>
-                    <label for="reviewstext">Review:</label>
-                    <input type="text" id="reviewstext" name="reviewstext" readOnly><br><br>
-                    <label for="reviewsrating">Rating:</label>
-                    <input type="text" id="reviewsrating" name="reviewsrating" readOnly><br><br>
-                    <label for="reviewstime">Timestamp:</label>
-                    <input type="text" id="date" name="date" readOnly><br><br>
+                    <div class="card-container">
+                        <label for="reviewsauthor">Author:</label>
+                        <input type="text" id="reviewsauthor" name="reviewsauthor" readOnly><br><br>
+                        <label for="reviewstext">Review:</label>
+                        <input type="text" id="reviewstext" name="reviewstext" readOnly><br><br>
+                        <label for="reviewsrating">Rating:</label>
+                        <input type="text" id="reviewsrating" name="reviewsrating" readOnly><br><br>
+                        <label for="reviewstime">Timestamp:</label>
+                        <input type="text" id="date" name="date" readOnly><br><br>
+                    </div>
                 </form>
             </div>
         </div>
