@@ -3,7 +3,7 @@ function handleOnLoad() //calls the populateList method and populates the array
     populateList();
 }
 
-function handleOnChange() //populates all the items in the list box to myBook
+function handleOnChange() //populates all the items in the list box to myReview
 {
     const selectedId = document.getElementById("selectListBox").value;
     reviewList.forEach((review)=>{
@@ -14,7 +14,7 @@ function handleOnChange() //populates all the items in the list box to myBook
     
     populateForm();
 }
-//method that activates the edit button, calls the makeEditable() method allowing the user to edit the post fields, and calls the hideButtons() method which replaces the new, edit, and delete buttons with the save and cancel button
+//method that activates the edit button, calls the makeEditable() method allowing the user to edit the review fields, and calls the hideButtons() method which replaces the new, edit, and delete buttons with the save and cancel button
 function handleEditClick(){
     makeEditable();
     hideButtons();
@@ -33,7 +33,7 @@ function handleNewClick(){
     document.getElementById("saveButton").innerHTML = buttonHtml;
     document.getElementById("saveButton").style.display = "inline-block";
 }
-//method that activates the delete button and allows the user to delete a review by calling the deleteTweet() method
+//method that activates the delete button and allows the user to delete a review by calling the deleteReview() method
 function handleDeleteClick(){
     deleteReview();
 }
