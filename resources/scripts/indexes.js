@@ -3,7 +3,7 @@ function handleOnLoad() //calls the populateList method and populates the array
     populateList();
 }
 
-function handleOnChange() //populates all the items in the list box to myBook
+function handleOnChange() //populates all the items in the list box to myReview
 {
     const selectedId = document.getElementById("selectListBox").value;
     reviewList.forEach((review)=>{

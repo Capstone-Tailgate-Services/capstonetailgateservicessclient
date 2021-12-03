@@ -2,7 +2,7 @@ const baseUrl = "https://capstonetailgateserviceapi.herokuapp.com/api/review"; /
 var reviewList = [];
 var myReview = {};
 
-function populateList(){ //populates review with all fields
+function populateList(){ //populates lists with all fields
 
     const allReviewApiUrl = baseUrl;
     fetch(allReviewApiUrl).then(function(response){
@@ -11,7 +11,7 @@ function populateList(){ //populates review with all fields
         reviewList = json;
         let html = "<select class = \"listBox\" onchange = \"handleOnChange()\" id= \"selectListBox\" name = \"list_box\" size=5 width=\"100%\">";
         json.forEach((review)=>{
-            html += "<option value = " + review.id  + ">" + review.date + "\t" + review.reviewstext  +  "</option>";
+            html += "<option value = " + review.id  + ">" + review.reviewstext  +  "</option>";
         })
         html += "</select>";
         document.getElementById("listBox").innerHTML = html;

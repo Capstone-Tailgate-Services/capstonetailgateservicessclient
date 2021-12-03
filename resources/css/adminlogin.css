@@ -1,0 +1,97 @@
+form {
+    width: 400px;
+    height: 500px;
+    background: white;
+    color:white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+}
+
+/*assign full width inputs*/
+
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/*set a style for the buttons*/
+
+button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+/* set a hover effect for the button*/
+
+button:hover {
+    opacity: 0.8;
+}
+/*set extra style for the cancel button*/
+
+.cancelbtn {
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    background-color: #f44336;
+}
+/*centre the display image inside the container*/
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+/*set image properties*/
+
+img.avatar {
+    width: 25%;
+    border-radius: 30%;
+}
+/*set padding to the container*/
+
+.container {
+    padding: 16px;
+}
+/*set the create an account text*/
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+/*set styles for span and cancel button on small screens*/
+body {
+    margin: 0;
+    width: 0;
+    background-image: url('../images/bdsnight.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    margin: -20px 0 50px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}
+
+/*git test*/
+/*images have been corrected*/
