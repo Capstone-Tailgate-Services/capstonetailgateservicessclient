@@ -53,18 +53,21 @@
         
 
         <div class="main-user-review">
-            <div class="aval-reviews">Avaliable Reviews</div>
-            <div id = "listBox"></div>
-            <form onsubmit="return false;" method="post"> 
-                <label for="reviewsrating">Rating:</label>
-                <input type="text" id="reviewsrating" name="reviewsrating" readOnly><br><br>
-                <label for="reviewstext">Review:</label>
-                <input type="text" id="reviewstext" name="reviewstext" readOnly><br><br>
-                <label for="reviewsauthor">Author:</label>
-                <input type="text" id="reviewsauthor" name="reviewsauthor" readOnly><br><br>
-                <label for="reviewstime">Timestamp:</label>
-                <input type="text" id="date" name="date" readOnly><br><br>
-            </form>
+            <div class="aval-reviews">Avaliable Reviews
+                 <div id = "listBox"></div>
+            </div>
+            <div class="flip-card-back">
+                <form onsubmit="return false;" method="post"> 
+                    <label for="reviewsauthor">Author:</label>
+                    <input type="text" id="reviewsauthor" name="reviewsauthor" readOnly><br><br>
+                    <label for="reviewstext">Review:</label>
+                    <input type="text" id="reviewstext" name="reviewstext" readOnly><br><br>
+                    <label for="reviewsrating">Rating:</label>
+                    <input type="text" id="reviewsrating" name="reviewsrating" readOnly><br><br>
+                    <label for="reviewstime">Timestamp:</label>
+                    <input type="text" id="date" name="date" readOnly><br><br>
+                </form>
+            </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
