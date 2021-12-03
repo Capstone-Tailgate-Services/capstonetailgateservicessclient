@@ -298,3 +298,24 @@ input[type=submit]:hover {
     overflow: hidden;
     background-color: #f1f1f1;
   }
+
+/* leave a review button */
+.btn-primary {
+    background-color: #000;
+    color: #fff !important;
+}
+
+.btn-primary:hover {
+background-color: #777;
+}
+
+.btn{
+    border: none;
+    border-radius: 3em;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+    display: inline-block;
+    font-size: 1em;
+    padding: 1em 2em;
+    width: auto;
+    
+}
