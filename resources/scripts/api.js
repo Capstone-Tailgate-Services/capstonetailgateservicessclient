@@ -2,7 +2,7 @@ const baseUrl = "https://capstonetailgateserviceapi.herokuapp.com/api/review"; /
 var reviewList = [];
 var myReview = {};
 
-function populateList(){ //populates book with all fields
+function populateList(){ //populates review with all fields
 
     const allReviewApiUrl = baseUrl;
     fetch(allReviewApiUrl).then(function(response){
