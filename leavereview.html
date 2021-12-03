@@ -23,9 +23,6 @@
                     <a href="home.html">CAPSTONE TAILGATE SERVICE</a>
                 </div>
 
-                <!-- <div class="nav-link-wrapper active-nav-link">
-                    <a href="home.html">Home</a>
-                </div> -->
 
                 <div class="nav-link-wrapper">
                     <a href="about.html">About</a>
@@ -34,10 +31,6 @@
                 <div class="nav-link-wrapper active-nav-link">
                     <a href="review.html">Reviews</a>
                 </div>
-
-                <!-- <div class="nav-link-wrapper">
-                    <a href="booking.html">Bookings</a>
-                </div> -->
             </div>
 
             <div class="right-side">
@@ -48,14 +41,7 @@
         </div>
         
 
-        <div class="main-user-review">
-            <div class="card">
-                <div class="card-container">
-                    <div class="aval-reviews">Avaliable Reviews
-                        <div id = "listBox"></div>
-                    </div>
-                </div>
-            </div>
+        <div class="main-user-review-one">
             <div class="card">
                 <form onsubmit="return false;" method="post"> 
                     <div class="card-container">
@@ -68,14 +54,13 @@
                         <label for="reviewstime">Timestamp:</label>
                         <input type="text" id="date" name="date" readOnly><br><br>
                     </div>
+                    <div class="btnRow">
+                        <button id="newButton" class="btn btn-primary" onclick = "handleNewClick()">Click To Leave Review</button>
+                        <br>
+                        <span id="saveButton"></span>
+                    </div>
                 </form>
             </div>
-            <div class="btnRow">
-                <button id="newButton" class="btn btn-primary" onclick = "handleNewClick()">New</button>
-                <br>
-                <span id="saveButton"></span>
-              </div>
-        </div>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
