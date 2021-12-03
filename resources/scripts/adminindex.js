@@ -62,7 +62,6 @@ function populateForm() //populates the form with all the important values
     document.getElementById("reviewsrating").value = myReview.reviewsrating;
     document.getElementById("reviewstext").value = myReview.reviewstext;
     document.getElementById("reviewsauthor").value = myReview.reviewsauthor;
-    document.getElementById("date").value = myReview.date;
 }
 //method that hides the buttons by setting the display for each button to none
 function hideButtons(){
@@ -82,7 +81,6 @@ function makeEditable(){
     reviewsRating = document.getElementById("reviewsrating").readOnly = false;
     reviewsText = document.getElementById("reviewstext").readOnly = false;
     reviewsAuthor = document.getElementById("reviewsauthor").readOnly = false;
-    date = document.getElementById("date").readOnly = false;
 }
 
 function blankFields() //stores the value of the empty text box
@@ -90,7 +88,6 @@ function blankFields() //stores the value of the empty text box
     document.getElementById("reviewsrating").value="";
     document.getElementById("reviewstext").value="";
     document.getElementById("reviewsauthor").value="";
-    document.getElementById("date").value="";
 }
 
 
@@ -99,5 +96,4 @@ function makeReadOnly() //makes it so user can only edit when he clicks edit
     reviewsRating = document.getElementById("reviewsrating").readOnly = true;
     reviewsText = document.getElementById("reviewstext").readOnly = true;
     reviewsAuthor = document.getElementById("reviewsauthor").readOnly = true;
-    date = document.getElementById("date").readOnly = true;
 }
