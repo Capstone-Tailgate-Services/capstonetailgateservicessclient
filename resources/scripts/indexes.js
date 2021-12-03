@@ -67,14 +67,10 @@ function populateForm() //populates the form with all the important values
 //method that hides the buttons by setting the display for each button to none
 function hideButtons(){
     document.getElementById("newButton").style.display = "none";
-    document.getElementById("editButton").style.display = "none";
-    document.getElementById("deleteButton").style.display = "none";
 }
 //method that displays the buttons
 function showButtons(){
     document.getElementById("newButton").style.display = "inline-block";
-    document.getElementById("editButton").style.display = "inline-block";
-    document.getElementById("deleteButton").style.display = "inline-block";
     document.getElementById("saveButton").style.display = "none";
 }
 // method that makes the fields editable by setting the readOnly property to false
