@@ -35,7 +35,6 @@ function makeReadOnly() //makes it so user can only edit when he clicks edit
     document.getElementById("reviewsrating").readOnly=true;
     document.getElementById("reviewstext").readOnly=true;
     document.getElementById("reviewsauthor").readOnly=true;
-<<<<<<< HEAD
     document.getElementById("date").readOnly=true;
 }
 
@@ -56,6 +55,4 @@ function showButtons(){
 
 function hideButtons(){
     document.getElementById("newButton").style.display = "none";
-=======
->>>>>>> 87b590e055da49384922e797d98166564b602db6
 }
