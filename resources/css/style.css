@@ -319,3 +319,13 @@ background-color: #777;
     width: auto;
     
 }
+
+.main-user-review-one{
+    display: grid;
+    height: 60vh;
+    grid-gap: 0.2em;
+    font-size: 16px;
+    text-align:center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
