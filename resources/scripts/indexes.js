@@ -38,4 +38,26 @@ function makeReadOnly() //makes it so user can only edit when he clicks edit
     document.getElementById("reviewstext").readOnly=true;
     document.getElementById("reviewsauthor").readOnly=true;
     document.getElementById("date").readOnly=true;
+<<<<<<< HEAD
+=======
+}
+
+function handleNewClick(){
+    makeEditable();
+    hideButtons();
+    blankFields();
+    var buttonHtml = "<button class=\"btn btn-primary btn-lg\" onclick=\"handleNewSave()\">Save</button>"
+    buttonHtml += "<button class=\"btn btn-warning btn-lg btn-cancel\" onclick=\"handleCancelSave()\">Cancel</button>"
+    document.getElementById("saveButton").innerHTML = buttonHtml;
+    document.getElementById("saveButton").style.display = "inline-block";
+}
+
+function showButtons(){
+    document.getElementById("newButton").style.display = "inline-block";
+    document.getElementById("saveButton").style.display = "none";
+}
+
+function hideButtons(){
+    document.getElementById("newButton").style.display = "none";
+>>>>>>> 26ddf525b25883b3a95b0e6e104eedc6d6b6cd30
 }
